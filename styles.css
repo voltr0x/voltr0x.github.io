@@ -1,0 +1,79 @@
+header {
+	display: flex;
+	justify-content: space-around;
+	padding-top: 120px;
+}
+
+.intro {
+	/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+	font-family: 'Open Sans', sans-serif;
+	padding-left: 50px;
+}
+
+.intro h2 {
+	font-size: 42px;
+	/*font-weight: 200;*/
+	/*color: rgb(169, 169, 169);*/
+	color: rgb(129, 133, 137);
+}
+
+.name {
+	font-weight: bold;
+	color: rgb(0, 0, 0);
+}
+
+.intro p {
+	/*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;*/
+	max-width: 700px;
+	font-size: 42px;
+	font-weight: bold;
+	/*color: rgb(68, 68, 82);*/
+	color: rgb(129, 133, 137);
+	/*line-height: 1px;*/
+}
+
+.img_container img {
+	padding-top: 40px;
+	padding-right: 80px;
+	height: 500px;
+	width: 500px;
+}
+
+@media screen and (max-width: 850px) {
+	.img_container img {
+		height: 300px;
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.img_container img {
+		height: 200px;
+		width: 200px;
+	}
+	.img_container {
+		position: absolute;
+    	top: 0;
+    	right: 0;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	header {
+		flex-direction: column;
+	}
+	.img_container img {
+		height: 150px;
+		width: 150px;
+	}
+
+	.intro {
+		padding: 45px 0px;
+		position: relative;
+		/*width: 150px;*/
+	}
+
+	.intro h2, .intro p {
+		font-size: 18px;
+	}
+}
