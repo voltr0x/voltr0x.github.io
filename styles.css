@@ -1,8 +1,8 @@
-.{
+. {
 	font-family: 'Open Sans', sans-serif;
 }
 
-a{
+a {
 	text-decoration: none;
 	color: black;
 }
@@ -59,12 +59,14 @@ header {
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 }
+
 .about img {
 	padding-right: 20px;
 	height: 320px;
 	width: 320px;
 	float: right;
 }
+
 .about h2 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 27px;
@@ -74,12 +76,13 @@ header {
 }
 
 .projects {
-	font-family: 'Open Sans',sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 }
+
 .projects h2 {
-	font-family: 'Open Sans',sans-serif;
-	font-size:  30px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
 	font-weight: 500;
 }
 
@@ -91,21 +94,26 @@ header {
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
-.flex div{
+
+.flex div {
 	width: 31%;
 }
+
 .projects img {
 	height: 320px;
 	width: 320px;
 }
+
 .projects div {
 	padding: 10px;
 }
+
 .projects div h2 {
-	font-size:  24px;
+	font-size: 24px;
 	font-weight: 400;
 	/*line-height: 3px;*/
 }
+
 .projects h3 {
 	text-align: justify;
 	font-size: 18px;
@@ -118,21 +126,26 @@ header {
 	text-align: center;
 	padding: 80px;
 }
-.skills .flex{
+
+.skills .flex {
 	justify-content: center;
 }
+
 .skills h2 {
 	font-size: 24px;
 	font-weight: 400;
 }
+
 .skills h3 {
 	padding: 10px;
 	font-size: 24px;
 	font-weight: 400;
 	text-align: center;
 	margin: 0 20px;
-	color: rgb(129, 133, 137);;
+	color: rgb(129, 133, 137);
+	;
 }
+
 .skills div div h3:nth-child(1) {
 	padding: 10px;
 	font-size: 24px;
@@ -144,11 +157,9 @@ header {
 
 .copyright {
 	padding-top: 100px;
-
 	font-size: 16px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 550;
-
 	display: inline-block;
 	max-width: 300px;
 }
@@ -162,8 +173,6 @@ header {
 	display: inline-block;
 	max-width: 800px;
 }
-
-
 
 //Minimizing and stuff
 @media screen and (max-width: 850px) {
@@ -180,48 +189,53 @@ header {
 	}
 	.img_container {
 		position: absolute;
-    	top: 0;
-    	right: 0;
+		top: 0;
+		right: 0;
 	}
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
 	header {
 		flex-direction: column;
 	}
-
-	/*.flex {
-		flex-direction: column;
-		justify-content: normal;
-	}*/
+	.img_container {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding-top: 20px;
+		padding-right: 60px;
+	}
 	.img_container img {
-		height: 150px;
-		width: 150px;
+		height: 200px;
+		width: 200px;
 	}
-
 	.intro {
-		padding: 45px 0px;
+		padding-left: 100px;
+		padding-top: 40px;
 		position: relative;
-		/*width: 150px;*/
+		/*width: 350px;*/
 	}
-
-	.intro h2, .intro p, .projects h2 {
+	.intro h2,
+	.intro p,
+	.projects h2,
+	.about h2,
+	.skills h2 {
 		font-size: 18px;
 	}
-	
 	.projects div h2 {
 		font-size: 15px;
 	}
 	.projects h3 {
 		font-size: 15px;
 	}
-
-	div {
-		width: 300px;
+	.projects div {
+		width: 350px;
 	}
-
-	.flex div{
-	width: 100%;
+	div.flex{
+		margin: auto;
+	}
+	.flex div {
+		width: 100%;
 	}
 	.projects div {
 		padding: 0px;
@@ -230,34 +244,134 @@ header {
 		height: 150px;
 		width: 150px;
 	}
-
 	.about {
-		padding-left: 20px;
-		padding-righ: 20px;
+		padding: 20px;
 	}
-
 	.about h3 {
-	font-size: 14px;
+		font-size: 14px;
 	}
-
 	.skills h3 {
 		padding: 0px;
-		font-size: 18px;
+		font-size: 15px;
 		font-weight: 400;
 		text-align: center;
 		margin: 0 20px;
-		color: rgb(129, 133, 137);;
+		color: rgb(129, 133, 137);
+	}
+	section.skills{
+		padding: 0;
 	}
 	.skills div div h3:nth-child(1) {
 		padding: 0px;
-		font-size: 18px;
+		font-size: 15px;
 		font-weight: 400;
 		text-align: center;
 		margin: 0 20px;
 		color: rgb(0, 0, 0);
+	}
+	.skills .flex {
+		flex-wrap: nowrap;
+		justify-content: center;
+		/*padding: 0 250px;*/
+	}
+	footer {
+		display: flex;
+		justify-content: space-between;
+	}
+	.copyright {
+		font-size: 10px;
+	}
+	.links {
+		font-size: 10px;
+	}
 }
 
+
+@media screen and (max-width: 425px) {
+	header {
+		flex-direction: column;
+	}
+	.img_container {
+		padding-top: 20px;
+	}
+	.img_container img {
+		height: 150px;
+		width: 150px;
+	}
+	.intro {
+		/*padding: 45px 0px;*/
+		padding: 0px 12px;
+		position: relative;
+		/*width: 350px;*/
+	}
+	.intro h2,
+	.intro p,
+	.projects h2,
+	.about h2,
+	.skills h2 {
+		font-size: 18px;
+	}
+	.projects div h2 {
+		font-size: 15px;
+	}
+	.projects h3 {
+		font-size: 15px;
+	}
+	.projects div {
+		width: 350px;
+	}
+	div.flex{
+		margin: auto;
+	}
+	.flex div {
+		width: 100%;
+	}
+	.projects div {
+		padding: 0px;
+	}
+	.projects img {
+		height: 150px;
+		width: 150px;
+	}
+	.about {
+		padding: 20px;
+	}
+	.about h3 {
+		font-size: 14px;
+	}
+	.skills h3 {
+		padding: 0px;
+		font-size: 15px;
+		font-weight: 400;
+		text-align: center;
+		margin: 0 20px;
+		color: rgb(129, 133, 137);
+		;
+	}
+	section.skills{
+		padding: 0;
+	}
+	.skills div div h3:nth-child(1) {
+		padding: 0px;
+		font-size: 15px;
+		font-weight: 400;
+		text-align: center;
+		margin: 0 20px;
+		color: rgb(0, 0, 0);
+	}
+	.skills .flex {
+		flex-wrap: wrap;
+		justify-content: center;
+		/*padding: 0 20px;*/
+	}
 	footer {
+		display: flex;
+		justify-content: space-between;
+	}
+	.copyright {
+		font-size: 10px;
+	}
+	.links {
 		font-size: 10px;
 	}
 }
