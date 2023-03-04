@@ -6,10 +6,17 @@ a {
 header {
 	width: 100%;
 	display: flex;
-/*	justify-content: space-around;*/
 	align-items: center;
 	position: fixed;
-/*	padding-top: 120px;*/
+	top: 0px;
+	left: 0px;
+	transition: all 300ms ease;
+	z-index: 10;
+}
+
+.section_title {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
 }
 
 .navbar {
@@ -17,6 +24,19 @@ header {
 	padding: 0px 50px;
 	display: flex;
 	justify-content: space-between;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	transition: transform 0.2s;
+}
+
+.nav_effect {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
+}
+
+.nav_hidden {
+	transform: translateY(-60px);
 }
 
 .nav_holder {
@@ -31,23 +51,21 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	box-sizing: border-box;
-	/*padding-right: 10px;*/
 }
 
-/*Ordered List*/
 ol {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	box-sizing: border-box;
 	counter-reset: li;
-	list-style-type: decimal-leading-zero; 
+	list-style-type: decimal-leading-zero;
+	color: rgb(129, 133, 137);
 }
 
 ol li {
 	padding-right: 40px;
-	content: counter(li, decimal-leading-zero); 
-	color: blue;
+	content: counter(li, decimal-leading-zero);
 }
 
 .intro {
@@ -69,7 +87,7 @@ ol li {
 }
 
 .name {
-	font-weight: 600;
+	font-weight: 800;
 	color: rgb(0, 0, 0);
 }
 
@@ -88,10 +106,7 @@ ol li {
 }
 
 .about {
-	padding-left: 90px;
-	padding-right: 90px;
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding: 100px 90px;
 	margin: 0 auto;
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
@@ -113,16 +128,69 @@ ol li {
 	text-align: justify;
 }
 
+.jobs {
+	margin: 0 200px;
+	padding: 100px 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.tabs {
+	display: flex;
+}
+
+.tabs_panel {
+	width: 200px;
+	flex-shrink: 0;
+	padding-top: 15px;
+}
+
+.tabs_button {
+	display: block;
+	padding: 10px;
+	border: none;
+	width: 100%;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.tabs_button:active {
+	background: #cccccc; //Change click color
+}
+
+.tabs_button_active {
+	font-weight: bold;
+	border-right: 2px solid #009879;
+	background: #cccccc;
+}
+
+.tabs_content {
+	padding: 15px;
+	font-size: 20px;
+	min-height: 450px;
+	margin-left: 15px;
+	display: none;
+}
+
+.tabs_content_active {
+	display: block;
+}
+
+/*First element of tabs_content will have no margin on top*/
+.tabs_content > :first-child {
+	margin-top: 0;
+}
+
 .projects {
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
+	padding: 100px 0;
 }
 
-.projects h2 {
+/*.projects h2 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 30px;
 	font-weight: 500;
-}
+}*/
 
 .flex {
 	display: flex;
@@ -166,10 +234,10 @@ ol li {
 	justify-content: center;
 }
 
-.skills h2 {
+/*.skills h2 {
 	font-size: 24px;
 	font-weight: 400;
-}
+}*/
 
 .skills h3 {
 	padding: 10px;
@@ -215,18 +283,6 @@ ol li {
 		width: 300px;
 	}
 }
-
-/*@media screen and (max-width: 550px) {
-	.img_container img {
-		height: 200px;
-		width: 200px;
-	}
-	.img_container {
-		position: absolute;
-		top: 0;
-		right: 0;
-	}
-}*/
 
 @media screen and (max-width: 768px) {
 	header {
@@ -407,6 +463,10 @@ ol li {
 	}
 	.links {
 		font-size: 10px;
+		padding-right: 10px;
+	}
+	.links a {
+		padding-right: 10px;
 	}
 	.img_container img{
 		padding: 0;

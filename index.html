@@ -23,17 +23,17 @@
 						</a>
 					</li>
 					<li>
-						<a href="#about">
+						<a href="#jobs">
 							Experience
 						</a>
 					</li>
 					<li>
-						<a href="#about">
+						<a href="#projects">
 							Projects
 						</a>
 					</li>
 					<li>
-						<a href="#about">
+						<a href="#skills">
 							Contact
 						</a>
 					</li>
@@ -52,7 +52,7 @@
 			<h2>Hi,</h2>
 			<h2>I'm <span class="name">Viraj Shirodkar.</span></h2>
 			<p>
-				Game developer on a perpetual quest to better myself.
+				Imaginative game developer on a perpetual quest to better myself.
 			</p>
 		</div>
 		<div class="img_container">
@@ -60,12 +60,51 @@
 		</div>
 	</section>
 
-	<section class="about">
+	<section id="about" class="about">
 		<h2>I am a second-year graduate student pursuing my Masters in Game Science and Design from Northeastern University, Boston.  As a child growing up in Mumbai, you could find me snugly lying in bed playing Patapon on my PSP. Fast-forward to today, I work on such games myself, which feels like a dream come true. As an engineer, I find it liberating to toy with the physics of 3D objects, exploiting the GPU for real-time graphics and creating open-world environments and character designs. It is fascinating that the phrase "Sky is the Limit" falls short when talking about the limits of video game development. If you can imagine it, you can make it! When I am not working on video games (or playing them *wink*), you can catch me working on my Ultimate Frisbee skills.</h2>
 	</section>
 
-	<section class="projects">
-		<h2>My projects</h2>
+	<section id="jobs" class="jobs">
+		<h2 class="section_title">Where I've worked</h2>
+		<div class="tabs">
+			<div class="tabs_panel">
+				<button id="tab1" class="tabs_button" data-for-tab="1">Age of Learning</button>
+				<button id="tab2" class="tabs_button" data-for-tab="2">Northeastern University</button>
+				<button id="tab3" class="tabs_button" data-for-tab="3">Northeastern University</button>
+			</div>
+
+			<div class="tabs_content" data-tab="1">
+				<h2>Software Engineer Intern @ Age of Learning</h2>
+				<ul>
+					<li>Implemented spine animations for a map system developed with C# on Unity game engine; all assets were bundled and deployed through a dependency injection framework</li>
+					<li>Designed and programmed a sequential animation system for a row-based category page consisting multiple activity buttons by utilizing asynchronous programming concepts, interfaces, and events</li>
+					<li>Quickly understood the source code and extended/modified existing logic to resolve outstanding backlogged bugs in a live feature in a non-disruptive way</li>
+					<li>Initiated in technical discussions and collaborated with team members on features and functionality and documented technical design on JIRA and Confluence</li>
+					<li>Collaborated closely with design and quality assurance teams to get code merge ready</li>
+				</ul>
+			</div>
+
+			<div class="tabs_content" data-tab="2">
+				<h2>Assosiate @ Northeastern Immersive Media Lab</h2>
+				<ul>
+					<li>Contributed to development of Unity and Unreal VR projects for Massachusetts General Hospital</li>
+					<li>Conducted and delivered Unity 3D and VR game engine training programs for multiple student research projects</li>
+					<li>Facilitated students with software development and biometric user research techniques such as eye tracking, EEG, and GSR; and created tutorials for Pico Neo 3, Valve Index, Oculus Quest, HTC Vive Pro and Microsoft HoloLens</li>
+				</ul>
+			</div>
+
+			<div class="tabs_content" data-tab="3">
+				<h2>Graduate Teaching Fellowship @ Northeastern University</h2>
+				<ul>
+					<li>Conducted in-person lectures, managed and graded students for an undergraduate course of HTML and CSS</li>
+				</ul>
+			</div>
+		</div>
+
+	</section>
+
+	<section id="projects" class="projects">
+		<h2 class="section_title">My projects</h2>
 		<div class="flex">
 			<div>
 				<a href="https://github.com/voltr0x/PongClone">
@@ -107,7 +146,7 @@
 			<div>
 				<a href="https://github.com/voltr0x/3DObjModelParser">
 				<img src="img/3DObj.png">
-				<h2>3D Objet Model Parser</h2>
+				<h2>3D Object Model Parser</h2>
 				<h3>Parse and render .obj files with vertex, texture and normal data with help of 3D math using C++ and OpenGL as one of the assinments in my computer graphics class.</h3>
 				</a>
 			</div>
@@ -115,8 +154,8 @@
 		</div>
 	</section>
 
-	<section class="skills">
-		<h2>My Skills</h2>
+	<section id="skills" class="skills">
+		<h2 class="section_title">My Skills</h2>
 		<div class="flex">
 			<div>
 				<h3>Programming</h3>
@@ -138,15 +177,65 @@
 	</section>
 
 	<!-- TO-DO: Add logos for footer -->
-	<footer>
+	<footer id="contact">
 		<div class="copyright">
 			<span>Developed by Viraj Shirodkar | 2021</span><br>
 			<span>Inspired by Joeb Rogers</span><br>
 		</div>
 		<div class="links">
-			<a href="https://github.com/voltr0x"><span>GitHub</span></a>&nbsp;&nbsp;&nbsp;
-			<a href="https://www.linkedin.com/in/virajshirodkar/"><span>LinkedIn</span></a>
+			<a href="https://github.com/voltr0x"><img src="img/github.svg"></a>
+			<a href="https://www.linkedin.com/in/virajshirodkar/"><img src="img/linkedin.svg"></a>
 		</div>
 	</footer>
+
+	<script type="text/javascript">
+		{	
+			const nav = document.querySelector(".navbar");
+			let lastScrollY = window.scrollY;
+
+			window.addEventListener("scroll", () => {
+				if(lastScrollY == 0) {
+					nav.classList.remove("nav_effect");
+				} else if (lastScrollY < window.scrollY) {
+					nav.classList.add("nav_hidden");
+				} else {
+					nav.classList.add("nav_effect");
+					nav.classList.remove("nav_hidden");
+				}
+				lastScrollY = window.scrollY;
+				/*console.log(lastScrollY);*/
+			});
+
+			function setupTabs() {
+				document.querySelectorAll(".tabs_button").forEach(button => {
+					button.addEventListener("click", () => {
+						const panel = button.parentElement;
+						const tabContainer = panel.parentElement;
+						const tabNum = button.dataset.forTab;
+						const tabToActivate = tabContainer.querySelector(`.tabs_content[data-tab="${tabNum}"]`);
+
+						panel.querySelectorAll(".tabs_button").forEach(button => {
+							button.classList.remove("tabs_button_active");
+						});
+
+						tabContainer.querySelectorAll(".tabs_content").forEach(button => {
+							button.classList.remove("tabs_content_active");
+						});
+
+						button.classList.add("tabs_button_active");
+						tabToActivate.classList.add("tabs_content_active");
+					});
+				});
+			}
+
+			document.addEventListener("DOMContentLoaded", () => {
+				setupTabs();
+
+				document.querySelectorAll(".tabs").forEach(tabContainer => {
+					tabContainer.querySelector(".tabs_panel .tabs_button").click();
+				});
+			});
+		}
+	</script>
 </body>
 </html>
