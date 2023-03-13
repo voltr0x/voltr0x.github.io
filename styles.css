@@ -15,7 +15,7 @@ header {
 }
 
 .section_title {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 30px;
 }
 
@@ -68,6 +68,12 @@ ol li {
 	content: counter(li, decimal-leading-zero);
 }
 
+.nav_resume {
+	/* border-radius: 25px; */
+	border: 2px solid rgb(129, 133, 137);
+	padding: 3px;
+}
+
 .intro {
 	display: flex;
 	justify-content: space-around;
@@ -75,13 +81,17 @@ ol li {
 }
 
 .intro_text {
-	font-family: 'Open Sans', sans-serif;
+	/* font-family: 'Open Sans', sans-serif; */
+	/* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'San Francisco','SF Pro Text', sans-serif; */
+	/* font-family: 'Helvetica', sans-serif; */
+	font-family: 'Source Sans Pro', sans-serif;
+	/* font-family: 'Proxima Nova', sans-serif; */
 	padding-left: 50px;
 	padding-top: 50px;
 }
 
 .intro h2 {
-	font-size: 42px;
+	font-size: 60px;
 	font-weight: 200;
 	color: rgb(129, 133, 137);
 }
@@ -93,7 +103,7 @@ ol li {
 
 .intro p {
 	max-width: 720px;
-	font-size: 38px;
+	font-size: 50px;
 	font-weight: 200;
 	color: rgb(129, 133, 137);
 }
@@ -108,7 +118,7 @@ ol li {
 .about {
 	padding: 100px 90px;
 	margin: 0 auto;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	text-align: center;
 	transition: opacity 0.6s;
 }
@@ -121,17 +131,19 @@ ol li {
 }
 
 .about h2 {
-	font-family: 'Open Sans', sans-serif;
 	font-size: 27px;
-	font-weight: 200;
+	font-weight: 400;
 	color: rgb(129, 133, 137);
+	/* color: #5A5A5A; */
 	text-align: justify;
 }
 
 .jobs {
 	margin: 0 200px;
 	padding: 100px 0;
-	font-family: 'Open Sans', sans-serif;
+	/* font-family: 'Open Sans', sans-serif; */
+	font-family: 'Source Sans Pro', sans-serif;
+
 }
 
 .tabs {
@@ -151,16 +163,22 @@ ol li {
 	width: 100%;
 	cursor: pointer;
 	font-size: 20px;
+	color: rgb(129, 133, 137);
+}
+
+.tabs_button:hover {
+	background: #cccccc;
+	transition: 0.2s;
 }
 
 .tabs_button:active {
-	background: #cccccc; //Change click color
+	background: #cccccc;
 }
 
 .tabs_button_active {
 	font-weight: bold;
-	border-right: 2px solid #009879;
-	background: #cccccc;
+	border-left: 4px solid #201A40;
+	color:rgb(0, 0, 0)
 }
 
 .tabs_content {
@@ -178,6 +196,10 @@ ol li {
 /*First element of tabs_content will have no margin on top*/
 .tabs_content > :first-child {
 	margin-top: 0;
+}
+
+.tabs_content li {
+	color: #5a5a5a;
 }
 
 .projects {
@@ -234,11 +256,6 @@ ol li {
 	justify-content: center;
 }
 
-/*.skills h2 {
-	font-size: 24px;
-	font-weight: 400;
-}*/
-
 .skills h3 {
 	padding: 10px;
 	font-size: 24px;
@@ -276,7 +293,7 @@ ol li {
 	max-width: 800px;
 }
 
-//Minimizing and stuff
+/*Minimizing and stuff*/
 @media screen and (max-width: 850px) {
 	.img_container img {
 		height: 300px;
