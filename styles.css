@@ -16,7 +16,20 @@ header {
 
 .section_title {
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 30px;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: rgb(129, 133, 137);
+	margin: 0;
+	/* width: 50%; */
+}
+
+.section_title_trial {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 100px;
+	text-transform: uppercase;
+	color: rgb(212, 215, 219);
+	margin: 0;
+	/* width: 50%; */
 }
 
 .navbar {
@@ -85,15 +98,15 @@ ol li {
 	padding-top: 50px;
 }
 
+.name {
+	font-weight: 800;
+	color: rgb(0, 0, 0);
+}
+
 .intro h2 {
 	font-size: 60px;
 	font-weight: 200;
 	color: rgb(129, 133, 137);
-}
-
-.name {
-	font-weight: 800;
-	color: rgb(0, 0, 0);
 }
 
 .intro p {
@@ -177,18 +190,18 @@ ol li {
 }
 
 .tabs_button:hover {
-	background: #cccccc;
+	background: rgb(212, 215, 219);
 	transition: 0.2s;
 }
 
 .tabs_button:active {
-	background: #cccccc;
+	background: rgb(212, 215, 219);
 }
 
 .tabs_button_active {
 	font-weight: bolder;
 	border-left: 4px solid #201A40;
-	color:rgb(0, 0, 0)
+	color:rgb(0, 0, 0);
 }
 
 .tabs_content {
@@ -217,10 +230,24 @@ ol li {
 
 .projects {
 	font-family: 'Open Sans', sans-serif;
-	text-align: center;
+	/* text-align: center; */
 	padding: 100px 0;
 	margin: 0 auto;
-	width: 60%;
+	width: 80%;
+}
+
+.projects_grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.projects_grid div {
+	width: 31%;
+	padding-right: 20px;
+	background-color: rgb(212, 215, 219);
+	margin-bottom: 10px;
 }
 
 .flex {
@@ -244,10 +271,10 @@ ol li {
 	padding: 10px;
 }
 
-.projects div h2 {
+/* .projects div h2 {
 	font-size: 24px;
 	font-weight: 400;
-}
+} */
 
 .projects h3 {
 	text-align: justify;
@@ -260,6 +287,10 @@ ol li {
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 	padding: 80px;
+}
+
+.contact .section_title {
+	color: black;
 }
 
 .contact h3 {
@@ -291,9 +322,6 @@ ol li {
 	padding-top: 100px;
 	float: right;
 	font-size: 16px;
-	/* font-family: 'Open Sans', sans-serif; */
-	/* font-weight: 550; */
-	/* display: inline-block; */
 	max-width: 800px;
 }
 
