@@ -244,7 +244,7 @@
 			let lastScrollY = window.scrollY;
 
 			window.addEventListener("scroll", () => {
-				if(lastScrollY == 0) {
+				if(window.scrollY == 0) {
 					nav.classList.remove("nav_effect");
 				} else if (lastScrollY < window.scrollY) {
 					nav.classList.add("nav_hidden");
